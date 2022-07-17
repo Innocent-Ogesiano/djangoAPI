@@ -8,5 +8,5 @@ class Links(models.Model):
     description = models.CharField(max_length=200)
     identifier = models.SlugField(max_length=20, unique=True, blank=True)
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
-    created_date = models.DateTimeField
+    created_date = models.DateTimeField()
     active = models.BooleanField(default=True)
